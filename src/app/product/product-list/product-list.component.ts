@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProductos } from '../productos';
 
 @Component({
   selector: 'app-product-list',
@@ -6,14 +7,20 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-
-  productos:any[]=[
+  imageWIdth:number =200;
+  imageMargin:number = 2;
+  muestraImg: boolean= true;
+  listfilter:string = '';
+  muestImg():void{
+    this.muestraImg=!this.muestraImg;
+  }
+  productos:IProductos[]=[
     {
       "productosId":1,
       "Modelo":"Sentra",
       "Descripcion":"4 puertas",
       "precio": 20000,
-      "Year":2023,
+      "Year":"Marzo 23 2023",
       "Marca":"NISSAN",
       "Color":"Azul",
       "ImagenUrl":"https://d3s2hob8w3xwk8.cloudfront.net/autos-landing/nissan/sentra-2023/colores/GRIS-OXFORD.png"
@@ -23,7 +30,7 @@ export class ProductListComponent {
       "Modelo":"A4",
       "Descripcion":"4 puertas",
       "precio": 30000,
-      "Year":2022,
+      "Year":"febrero 25 2022",
       "Marca":"AUDI",
       "Color":"Blanco",
       "ImagenUrl":"https://platform.cstatic-images.com/in/v2/stock_photos/0ec4ca7b-51ca-4911-9915-67dc18aedbd6/78afd191-7f78-49a0-884d-d625abffed6f.png"
@@ -33,7 +40,7 @@ export class ProductListComponent {
       "Modelo":"Rio",
       "Descripcion":"4 puertas",
       "precio": 150000,
-      "Year":2020,
+      "Year": "septiembre 29 2020",
       "Marca":"KIA",
       "Color":"Azul",
       "ImagenUrl":"https://lh5.googleusercontent.com/proxy/Qylv7z-lD2Z1HSc8FKUwdo-MitJjHrE_uBWBe5ap1uSScjNTFSgsOcoUkNzb3gPaNzCW7ROFIG63A4J9uOWGs97yTHJWJkPC8UQ9howfcwtWaQ"
