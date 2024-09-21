@@ -1,1 +1,46 @@
-<p>product-list works!</p>
+<div class="card">
+    <div class="card-header">
+        Lista de productos
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md_2">
+            Filtra por:
+        <   </div>
+            <div class="col-md_2">
+                <input type="text" readonly class="form-control">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Filtro:</h3>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped text-center" *ngIf="productos.length">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Modelo</th>
+                            <th>Descripciòn</th>
+                            <th>Año</th>
+                            <th>Precio</th>
+                            <th>Marca</th>
+                            <th>Color</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let producto of productos">
+                            <td class="w-25"><img src="{{producto.ImagenUrl}}" class="img-fluid" width="200"></td>
+                            <td>{{producto.Modelo}}</td>
+                            <td>{{producto.Descripcion}}</td>
+                            <td>{{producto.Year}}</td>
+                            <td class="text-success">{{producto.precio  | currency}}</td>
+                            <td>{{producto.Marca}}</td>
+                            <td>{{producto.Color}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
