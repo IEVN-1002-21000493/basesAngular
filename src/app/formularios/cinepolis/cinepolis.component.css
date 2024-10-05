@@ -1,0 +1,19 @@
+.form-group{
+    display: flex;
+    margin: 5px;
+}
+.form-group label{
+    margin-right: 10px;
+}
+.principal{
+    height: 600px;
+    background-color: #111e6c;
+}
+.salida{
+    height: 100%;
+}
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    accent-color: #38d51d;
+}

@@ -1,0 +1,47 @@
+<div class="container text-light principal">
+    <h1 class="text-center">Cinepolis</h1>
+    <div class="row justify-content-around cuadrado">
+            <fieldset class="col-md-5 border border-3 border-ligth p-4">
+                <legend>Entrada</legend>
+                <form [formGroup]="formulario">
+                    <div class="row my-3 justify-content-around">
+                        <label class="col-md-3" for="nombre">Nombre</label>
+                        <input class="col-md-5" type="text" id="nombre" formControlName="nombre">
+                    </div>
+                    <div class="row my-3 justify-content-around">
+                        <label class="col-md-3" for="nombre">Personas</label>
+                        <input class="col-md-5" type="text" id="nombre" formControlName="cantidad_persona">
+                    </div>
+                    <div class="row my-3 justify-content-around">
+                        <label class="col-md-3">Tarjeta Cineco</label>
+                        <div class="col-md-5">
+                            <input class="mx-2" type="radio" id="si" formControlName="tarjeta" value="si">
+                            <label class="mx-2" for="si">Sí</label>
+                            <input class="mx-2" type="radio" id="no" formControlName="tarjeta" value="no">
+                            <label class="mx-2" for="no">No</label>
+                        </div>
+                    </div>
+                    <div class="row my-3 justify-content-around">
+                        <label class="col-md-3" for="boletos">Cantidad De Boletos</label>
+                        <input class="col-md-5" type="number" id="boletos" formControlName="cantidad_boletos">
+                    </div>
+                </form>
+            </fieldset>
+            <fieldset class="col-md-5 border border-3 border-ligth p-4 salida cuadrado">
+                <legend>Salidas</legend>
+                <div class="row my-3">
+                    <label class="col-md-3" for="pago">Valor a Pagar</label>
+                    <input class="col-md-5" type="text" id="pago" name="pago" disabled value="{{resultado}}">
+                </div>
+            </fieldset>     
+        </div>
+        <div class="row justify-content-center my-2">
+            <fieldset class="col-md-5 border border-3 border-ligth p-4">
+                <legend>Salidas</legend>
+                <div class="row my-3 p-3">
+                    <button  class="col-md-5 btn btn-light mx-3 btn-sm" (click)="calcularboletos()">Comprar</button>
+                    <a class="col-md-5 btn btn-light mx-3 btn-sm" href="/compras">Salir</a>
+                </div>
+            </fieldset>     
+        </div>
+</div>  
